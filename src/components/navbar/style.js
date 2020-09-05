@@ -5,15 +5,28 @@ const active = "#62534b";
 const inactive = "#62534bd9";
 
 export const Logo = styled.img`
-  max-width: 30%;
+  max-width: 35%;
+  @media only screen and (max-width: 550px) {
+    max-width: 55%;
+  }
 `;
 
 export const NavBarWrapper = styled.div`
-  height: 100px;
+  height: 80px;
+  padding-top: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #62534bd9;
+  @media only screen and (max-width: 991px) {
+    height: 60px;
+  }
+  @media only screen and (max-width: 767px) {
+    height: 45px;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    padding-bottom: 1em;
+  }
 `;
 
 export const Ul = styled.ul`
@@ -21,6 +34,9 @@ export const Ul = styled.ul`
   color: rgb(98, 83, 75);
   margin-top: 2em;
   font-size: 1.25em;
+  @media only screen and (max-width: 1130px) {
+    display: none;
+  }
 `;
 
 export const Li = styled(Link)`
@@ -47,5 +63,12 @@ export const Li = styled(Link)`
   }
   &:focus {
     box-shadow: none;
+  }
+`;
+
+export const MenuWrapper = styled.div`
+  padding-right: 1em;
+  @media only screen and (min-width: 1131px) {
+    display: none;
   }
 `;
